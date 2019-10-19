@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import NavigationBar from './NavigationBar/NavigationBar';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Route } from 'react-router';
+// import AboutUs from './Link/AboutUs';
+// import PageHeader from './PageHeader/PageHeader';
+import Sports from './Sports/Sports';
+import Login from './Login/Login';
+import SessionContext from './Login/SessionContext';
 
-function App() {
+class App extends React.Component {
+  state = {
+    user: {}
+  };
+
+  saveUser = (user) => {
+    this.setState({ user });
+    localStorage.setItem('siit4-user', JSON.stringify(user));
+  }
+
+  componentDidMount() {
+    const existingLogin = localStorage.getItem('siit4-user');
+    if(existingLogin) {
+      this.setState({ user: JSON.parse(existingLogin) });
+    }
+  }
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      {/* <PageHeader/> */}
+      <Router>
+        <SessionContext.Provider value={ {user: this.state.user, setUser: this.saveUser} }>
+          <NavigationBar/>
+          <Route path='/sports' component= { Sports } />
+          <Route path='/login' component= { Login } />
+        </SessionContext.Provider>
+      </Router>
+    </>
+  )}
+};
 
 export default App;
+
