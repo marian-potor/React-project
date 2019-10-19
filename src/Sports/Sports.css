@@ -1,7 +1,6 @@
 .container {
     display: flex;
-    margin-right: 0%;
-    margin-left: 0%;
+    margin:70px 0 0;
 }
 body {
     background-color: grey;
@@ -15,7 +14,43 @@ body {
     width: 80%;
     text-align: center;
 }
+.listHead {
+    background-color: yellow;
+    color: #dc3545;
+    text-align: center;
+    font-weight: bold;
+}
 
 .virtualTicket {
-
+    margin: 60px 1%;
+    position: fixed;
+    top: 0;
+    right: 10px;
+    width: 300px;
+}
+.virtualTicket table {
+    box-sizing: border-box;
+    width: 80%;
+    left: 0;
+    right: 0;
+}
+table {
+    background-color: #fff;
+    margin-top: 10px;
+}
+.oddsButton {
+    height: 30px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    font-weight: bold;
+}
+.oddsButton:hover {
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    background-color: yellow;
+}
+#result{
+    width: 50px;
 }

@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
 // import AboutUs from './Link/AboutUs';
 // import PageHeader from './PageHeader/PageHeader';
+import HomePage from './HomePage/HomePage';
 import Sports from './Sports/Sports';
 import Login from './Login/Login';
 import SessionContext from './Login/SessionContext';
@@ -32,7 +33,9 @@ class App extends React.Component {
       {/* <PageHeader/> */}
       <Router>
         <SessionContext.Provider value={ {user: this.state.user, setUser: this.saveUser} }>
-          <NavigationBar/>
+          <NavigationBar />
+          {/* <HomePage /> */}
+          <Route exact path='/' component= { HomePage } />
           <Route path='/sports' component= { Sports } />
           <Route path='/login' component= { Login } />
         </SessionContext.Provider>

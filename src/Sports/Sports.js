@@ -58,7 +58,8 @@ class Sports extends React.Component {
            <div className="container">
                <div className="sportsList">
                     <ListGroup>
-                            { this.state.sportsList.map(el => <ListGroup.Item key={ el } action onClick={ this.handleClick.bind(this, el)}> { el } </ListGroup.Item>) }
+                        { this.state.sportsList.length?<ListGroup.Item key="listHeader" className="listHead">Choose sport</ListGroup.Item>:'' }
+                        { this.state.sportsList.map(el => <ListGroup.Item key={ el } action onClick={ this.handleClick.bind(this, el)}> { el } </ListGroup.Item>) }
                     </ListGroup>
                </div>
                <div className="competitions">

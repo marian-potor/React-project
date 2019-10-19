@@ -89,18 +89,18 @@ class UserSelections extends React.Component {
 
     render(){
         return(
-            <Container className='virtualTicket'>
-                <Table striped bordered hover>
-                    <thead>
+            <div className='virtualTicket'>
+                <Table bordered>
+                    <thead className="listHead">
                         <tr key='tableHead'>
-                        <th>Event</th>
-                        <th>Result</th>
-                        <th>Odds</th>
+                        <th id='event'>Event</th>
+                        <th id='result'>Result</th>
+                        <th id='odds'>Odds</th>
+                        <th id='remove'></th>
                         </tr>
                     </thead>
                     <tbody>
                         { this.state.events }
-                        {/* { console.log(this.state.selectedGames) } */}
                         <tr>
                             <td>Stake:</td>
                             <td><input></input></td>
@@ -110,7 +110,7 @@ class UserSelections extends React.Component {
                     </tbody>
                 </Table>
                 <button onClick={ this.handleSave }>Save</button>
-            </Container>
+            </div>
         )
     }
 }

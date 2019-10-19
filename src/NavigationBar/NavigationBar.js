@@ -3,6 +3,7 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Link, } from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 import SessionContext from '../Login/SessionContext';
+import './NavigationBar.css'
 
 
 class NavigationBar extends Component {
@@ -20,8 +21,8 @@ class NavigationBar extends Component {
 
     render(){
         return (
-        <Navbar bg="danger" expand="lg">
-            <Navbar.Brand><NavLink to="/">Home</NavLink></Navbar.Brand>
+        <Navbar bg="danger" expand="lg" className="navBar">
+            <Navbar.Brand><NavLink exact to="/">Home</NavLink></Navbar.Brand>
             <Navbar.Brand><NavLink to="/sports">Sports</NavLink></Navbar.Brand>
             <Nav className="mr-auto">
             </Nav>

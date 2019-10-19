@@ -56,13 +56,16 @@ class Events extends Component {
                     <td>{ el.homeTeam } { '-' } {el.awayTeam}</td>
                     <td>{ el.startTime }</td>
                     <td>
-                        <button value="1" onClick={ (e) => this.handleClick(el, e) } >{ el.homeOdds }</button>
+                        <button value="1" onClick={ (e) => this.handleClick(el, e) } className="oddsButton">{ el.homeOdds }</button>
                     </td>
+                    { el.drawOdds !== "-"?
                     <td>
-                        <button value="X" onClick={ (e) => this.handleClick(el, e) } >{ el.drawOdds }</button>
-                    </td>
+                        <button value="X" onClick={ (e) => this.handleClick(el, e) } className="oddsButton">{ el.drawOdds }</button>
+                    </td>:
+                    <td>-</td>
+                    }
                     <td>
-                        <button value="2" onClick={ (e) => this.handleClick(el, e) } >{ el.awayOdds }</button>
+                        <button value="2" onClick={ (e) => this.handleClick(el, e) } className="oddsButton">{ el.awayOdds }</button>
                     </td>
                 </tr>
         ));
@@ -92,6 +95,7 @@ class Events extends Component {
         this.setState({
             smoothData
         })
+        console.log(this.state.smoothData) 
     }
 
     handleClick(el, e) {
@@ -126,8 +130,17 @@ class Events extends Component {
             )
         }
         return(
-            <div className="container">
-                <Table striped bordered hover>
+            <div>
+                <Table striped bordered>
+                <thead className="listHead">
+                    <tr>
+                    <th>Game</th>
+                    <th>Start date and time</th>
+                    <th>1</th>
+                    <th>X</th>
+                    <th>2</th>
+                    </tr>
+                </thead>
                     <tbody>
                         { this.state.events }
                     </tbody>

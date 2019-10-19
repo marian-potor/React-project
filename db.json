@@ -1077,48 +1077,5 @@
       "lastName": "Potor"
     }
   ],
-  "lastSelection": [
-    {
-      "userID": 1,
-      "data": [
-        {
-          "gamekey": "1570291200_Eupen_KV Mechelen",
-          "homeTeam": "Eupen",
-          "awayTeam": "KV Mechelen",
-          "startTime": "10/5/2019, 7:00:00 PM",
-          "homeOdds": 2.55,
-          "awayOdds": 2.5,
-          "drawOdds": 3.45,
-          "gameOutcome": "threeChoices",
-          "choice": "1",
-          "choiceOdds": 2.55
-        },
-        {
-          "gamekey": "1570298400_Waasland-Beveren_Oostende",
-          "homeTeam": "Waasland-Beveren",
-          "awayTeam": "Oostende",
-          "startTime": "10/5/2019, 9:00:00 PM",
-          "homeOdds": 2.5,
-          "awayOdds": 2.43,
-          "drawOdds": 3.75,
-          "gameOutcome": "threeChoices",
-          "choice": "X",
-          "choiceOdds": 3.75
-        },
-        {
-          "gamekey": "1570298400_SV Zulte-Waregem_Club Brugge",
-          "homeTeam": "SV Zulte-Waregem",
-          "awayTeam": "Club Brugge",
-          "startTime": "10/5/2019, 9:00:00 PM",
-          "homeOdds": 5.5,
-          "awayOdds": 1.52,
-          "drawOdds": 4.3,
-          "gameOutcome": "threeChoices",
-          "choice": "1",
-          "choiceOdds": 5.5
-        }
-      ],
-      "id": 1
-    }
-  ]
+  "lastSelection": []
 }

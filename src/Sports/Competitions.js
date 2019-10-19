@@ -26,8 +26,11 @@ class Competitions extends Component {
         })
        
         if (currentInfo) {
-            var groups = <ListGroup>{ currentInfo.map(el => <ListGroup.Item key={ el.key.concat(el.group) } action onClick={ this.currentKey.bind(this, el) }>{ el.details }{':'} { el.title }</ListGroup.Item>) }</ListGroup>
-
+            var groups = 
+            <ListGroup>
+                { currentInfo.length?<ListGroup.Item key="listHeader" className="listHead">Choose competition</ListGroup.Item>:'' }
+                { currentInfo.map(el => <ListGroup.Item key={ el.key.concat(el.group) } action onClick={ this.currentKey.bind(this, el) }>{ el.details }{':'} { el.title }</ListGroup.Item>) }
+            </ListGroup>
             this.setState({
                 render: groups
             })
