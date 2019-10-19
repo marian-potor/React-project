@@ -44,8 +44,7 @@ class Competitions extends Component {
             this.getComp()
             }
     }
-
-
+    
     render() {
         return(
             <>
