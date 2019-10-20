@@ -1077,5 +1077,11 @@
       "lastName": "Potor"
     }
   ],
-  "lastSelection": []
+  "lastSelection": [
+    {
+      "userID": 1,
+      "data": [],
+      "id": 1
+    }
+  ]
 }

@@ -95,7 +95,6 @@ class Events extends Component {
         this.setState({
             smoothData
         })
-        console.log(this.state.smoothData) 
     }
 
     handleClick(el, e) {

@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavigationBar from './NavigationBar/NavigationBar';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Route } from 'react-router';
+import { Route, Redirect } from 'react-router';
 // import AboutUs from './Link/AboutUs';
 // import PageHeader from './PageHeader/PageHeader';
 import HomePage from './HomePage/HomePage';

@@ -14,7 +14,6 @@ class NavigationBar extends Component {
     static contextType = SessionContext;
 
     handleLogout = () => {
-    console.log(this.state.user);
       this.context.setUser({});
       localStorage.removeItem('siit4-user');
     }
@@ -29,7 +28,7 @@ class NavigationBar extends Component {
             <SessionContext.Consumer>
                 { (props) => props.user.username ? 
                     <>
-                        <p>Logged in as: { props.user.username }</p>
+                        <p className="userName">Logged in as: { props.user.username }</p>
                         <Button variant="success" onClick={ this.handleLogout }>Logout</Button>
                     </> : 
                     <Button variant="success" as={ Link } to='/Login'>Login</Button> 

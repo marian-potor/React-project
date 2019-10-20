@@ -27,10 +27,9 @@ class Login extends React.Component {
 
     const res = await Axios(`http://localhost:3003/users?username=${this.state.username}&password=${this.state.password}`);
     if(res.data.length === 1) {
-      //user logged in successfully
       this.context.setUser(res.data[0]);
+      this.props.history.push('/');
     } else {
-      // error logging in
       this.setState({
         loginError: 'Username or password are not valid.'
       })
@@ -40,6 +39,7 @@ class Login extends React.Component {
 
   render() {
     return (
+      <>
       <form onSubmit={ this.handleSubmit }>
         <h2>Login</h2>
         <p style={ { 'fontWeight': 'bold', color: '#cc0000'} }>
@@ -57,6 +57,8 @@ class Login extends React.Component {
           <button type="submit">Log In</button>
         </p>
       </form>
+      </>
+    
     );
   }
 }
