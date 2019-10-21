@@ -123,13 +123,14 @@ class Events extends Component {
 
 
     render() {
-        if(!this.state.events){
-            return(
-                <h1>Not yet loaded</h1>
-            )
-        }
+        // if(!this.state.events){
+        //     return(
+        //         <h1>Not yet loaded</h1>
+        //     )
+        // }
         return(
             <div>
+                { this.state.smoothData[0]?
                 <Table striped bordered>
                 <thead className="listHead">
                     <tr>
@@ -143,7 +144,8 @@ class Events extends Component {
                     <tbody>
                         { this.state.events }
                     </tbody>
-                </Table>
+                </Table>:
+                <div id="competitionList">Please select competitions to view available events</div> }
                 <UserSelections game={ this.state.selectedGame } />
             </div>
         )

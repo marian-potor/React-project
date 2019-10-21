@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
-import { Link, } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 import SessionContext from '../Login/SessionContext';
 import './NavigationBar.css'
@@ -16,6 +16,7 @@ class NavigationBar extends Component {
     handleLogout = () => {
       this.context.setUser({});
       localStorage.removeItem('siit4-user');
+      this.props.history.push('/login');
     }
 
     render(){
@@ -39,4 +40,4 @@ class NavigationBar extends Component {
     }
 }
 
-export default NavigationBar;
+export default withRouter(NavigationBar);

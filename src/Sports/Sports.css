@@ -20,7 +20,12 @@ body {
     text-align: center;
     font-weight: bold;
 }
-
+#competitionList {
+    color: #dc3545;
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 30px 0;
+}
 .virtualTicket {
     box-sizing: border-box;
     margin: 60px 0%;
@@ -48,6 +53,10 @@ body {
     border-width: 1px;
     border-color: black;
     border-radius: 0.25rem;
+}
+.virtualTicket p {
+    color: #dc3545;
+    margin: 15px 0;
 }
 input {
     width: 150px;

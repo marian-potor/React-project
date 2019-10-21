@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavigationBar from './NavigationBar/NavigationBar';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Route, Redirect } from 'react-router';
+import { Route } from 'react-router';
 // import AboutUs from './Link/AboutUs';
 // import PageHeader from './PageHeader/PageHeader';
 import HomePage from './HomePage/HomePage';
@@ -12,7 +12,7 @@ import SessionContext from './Login/SessionContext';
 
 class App extends React.Component {
   state = {
-    user: {}
+    user: {},
   };
 
   saveUser = (user) => {
@@ -23,7 +23,10 @@ class App extends React.Component {
   componentDidMount() {
     const existingLogin = localStorage.getItem('siit4-user');
     if(existingLogin) {
-      this.setState({ user: JSON.parse(existingLogin) });
+      this.setState({ 
+        user: JSON.parse(existingLogin),
+      });
+      console.log('ddd', this.state.user);
     }
   }
 
@@ -34,7 +37,6 @@ class App extends React.Component {
       <Router>
         <SessionContext.Provider value={ {user: this.state.user, setUser: this.saveUser} }>
           <NavigationBar />
-          {/* <HomePage /> */}
           <Route exact path='/' component= { HomePage } />
           <Route path='/sports' component= { Sports } />
           <Route path='/login' component= { Login } />

@@ -8,7 +8,7 @@ import './Sports.css';
 class UserSelections extends React.Component {
     state = {
         selectedGames: [],
-        events: null,
+        // events: null,
         listItems: null,
         prevProps: null,
         stake: 1
@@ -37,10 +37,11 @@ class UserSelections extends React.Component {
                 <td><button onClick = { (e) => this.removeItem(el) }>X</button></td>
             </tr>
         ));
+        return events;
 
-        this.setState({
-            events
-        });
+        // this.setState({
+        //     events
+        // });
     }
 
     removeItem = (currentLine) => {
@@ -50,7 +51,7 @@ class UserSelections extends React.Component {
             selectedGames,
             listItems
         })
-        this.renderChoices(selectedGames);
+        // this.renderChoices(selectedGames);
     }
 
     async updateDB() {    
@@ -75,7 +76,7 @@ class UserSelections extends React.Component {
                 this.setState({
                     selectedGames
                 })
-                this.renderChoices(selectedGames);
+                // this.renderChoices(selectedGames);
             } 
         }
     }
@@ -92,7 +93,7 @@ class UserSelections extends React.Component {
                 listItems,
                 prevProps
             }) 
-            this.renderChoices(selectedGames);
+            // this.renderChoices(selectedGames);
         }
     }
 
@@ -111,7 +112,8 @@ class UserSelections extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        { this.state.events }
+                        { this.state.selectedGames.length?this.renderChoices(this.state.selectedGames):
+                        <tr><td><p>Please select events</p></td></tr> }
                         <tr>
                             <td className="ticketFooter">
                                 <label htmlFor="stake">Stake:</label><br/>
