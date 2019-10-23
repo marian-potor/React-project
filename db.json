@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "events": [
     {
       "success": true,
       "data": [
@@ -1079,9 +1079,100 @@
   ],
   "lastSelection": [
     {
+      "userID": 2,
+      "data": [
+        {
+          "gamekey": "1570291200_Eupen_KV Mechelen",
+          "homeTeam": "Eupen",
+          "awayTeam": "KV Mechelen",
+          "startTime": "10/5/2019, 7:00:00 PM",
+          "homeOdds": 2.55,
+          "awayOdds": 2.5,
+          "drawOdds": 3.45,
+          "gameOutcome": "threeChoices",
+          "choice": "1",
+          "choiceOdds": 2.55
+        },
+        {
+          "gamekey": "1570298400_Waasland-Beveren_Oostende",
+          "homeTeam": "Waasland-Beveren",
+          "awayTeam": "Oostende",
+          "startTime": "10/5/2019, 9:00:00 PM",
+          "homeOdds": 2.5,
+          "awayOdds": 2.43,
+          "drawOdds": 3.75,
+          "gameOutcome": "threeChoices",
+          "choice": "X",
+          "choiceOdds": 3.75
+        },
+        {
+          "gamekey": "1570298400_SV Zulte-Waregem_Club Brugge",
+          "homeTeam": "SV Zulte-Waregem",
+          "awayTeam": "Club Brugge",
+          "startTime": "10/5/2019, 9:00:00 PM",
+          "homeOdds": 5.5,
+          "awayOdds": 1.52,
+          "drawOdds": 4.3,
+          "gameOutcome": "threeChoices",
+          "choice": "2",
+          "choiceOdds": 1.52
+        }
+      ],
+      "id": 2
+    },
+    {
       "userID": 1,
-      "data": [],
-      "id": 1
+      "data": [
+        {
+          "gamekey": "1570291200_Eupen_KV Mechelen",
+          "homeTeam": "Eupen",
+          "awayTeam": "KV Mechelen",
+          "startTime": "10/5/2019, 7:00:00 PM",
+          "homeOdds": 2.55,
+          "awayOdds": 2.5,
+          "drawOdds": 3.45,
+          "gameOutcome": "threeChoices",
+          "choice": "1",
+          "choiceOdds": 2.55
+        },
+        {
+          "gamekey": "1570298400_Waasland-Beveren_Oostende",
+          "homeTeam": "Waasland-Beveren",
+          "awayTeam": "Oostende",
+          "startTime": "10/5/2019, 9:00:00 PM",
+          "homeOdds": 2.5,
+          "awayOdds": 2.43,
+          "drawOdds": 3.75,
+          "gameOutcome": "threeChoices",
+          "choice": "X",
+          "choiceOdds": 3.75
+        },
+        {
+          "gamekey": "1570298400_SV Zulte-Waregem_Club Brugge",
+          "homeTeam": "SV Zulte-Waregem",
+          "awayTeam": "Club Brugge",
+          "startTime": "10/5/2019, 9:00:00 PM",
+          "homeOdds": 5.5,
+          "awayOdds": 1.52,
+          "drawOdds": 4.3,
+          "gameOutcome": "threeChoices",
+          "choice": "1",
+          "choiceOdds": 5.5
+        },
+        {
+          "gamekey": "1571872200_Orlando Magic_Cleveland Cavaliers",
+          "homeTeam": "Orlando Magic",
+          "awayTeam": "Cleveland Cavaliers",
+          "startTime": "10/24/2019, 2:10:00 AM",
+          "homeOdds": 4.2,
+          "awayOdds": 1.22,
+          "drawOdds": "-",
+          "gameOutcome": "twoChoices",
+          "choice": "2",
+          "choiceOdds": 1.22
+        }
+      ],
+      "id": 3
     }
   ]
 }

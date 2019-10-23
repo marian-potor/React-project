@@ -1,3 +1,16 @@
+#homeBackground {
+    background-color: grey;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.quotes {
+    background-color: rgba(255, 255, 0, 0.8);
+    color: #dc3545;
+}
 .carousel {
     margin:80px 2% 0;
 }

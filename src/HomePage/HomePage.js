@@ -4,6 +4,7 @@ import './HomePage.css'
 
 function HomePage () {
     return(
+        <div id='homeBackground'>
         <Carousel className="carousel">
             <Carousel.Item>
                 <img
@@ -11,8 +12,8 @@ function HomePage () {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h1 className="quotes">Make your own luck!</h1>
+                <h3 className="quotes">You miss 100% of the shots you don't take.</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -21,8 +22,8 @@ function HomePage () {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h1 className="quotes">Play now!</h1>
+                <h3 className="quotes">You have to expect things of yourself before you can do them.</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -31,11 +32,12 @@ function HomePage () {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h1 className="quotes">There are always more games</h1>
+                <h3 className="quotes">It's not whether you get knocked down; it's whether you get up.</h3>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
+        </div>
     )
 }
 

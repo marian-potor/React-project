@@ -8,7 +8,6 @@ import './Sports.css';
 class UserSelections extends React.Component {
     state = {
         selectedGames: [],
-        // events: null,
         listItems: null,
         prevProps: null,
         stake: 1
@@ -38,10 +37,6 @@ class UserSelections extends React.Component {
             </tr>
         ));
         return events;
-
-        // this.setState({
-        //     events
-        // });
     }
 
     removeItem = (currentLine) => {
@@ -51,7 +46,6 @@ class UserSelections extends React.Component {
             selectedGames,
             listItems
         })
-        // this.renderChoices(selectedGames);
     }
 
     async updateDB() {    
@@ -64,6 +58,7 @@ class UserSelections extends React.Component {
          res = await Promise.all(clearDB);
             const lastSelection = { userID: this.context.user.id, data: this.state.selectedGames }
             const selection = Axios.post(this.apiUrl, lastSelection);
+            return selection;
         }
     }
 
@@ -76,7 +71,6 @@ class UserSelections extends React.Component {
                 this.setState({
                     selectedGames
                 })
-                // this.renderChoices(selectedGames);
             } 
         }
     }
@@ -87,13 +81,11 @@ class UserSelections extends React.Component {
             selectedGames.push(this.props.game);
             const prevProps = this.props;
             const listItems = selectedGames.length;
-            console.log(listItems);
             this.setState({
                 selectedGames,
                 listItems,
                 prevProps
             }) 
-            // this.renderChoices(selectedGames);
         }
     }
 
@@ -131,7 +123,6 @@ class UserSelections extends React.Component {
                 <Button size="lg" block onClick={ this.handleSave }>
                     Save
                 </Button>
-                {/* <button onClick={ this.handleSave }>Save</button> */}
             </div>
         )
     }

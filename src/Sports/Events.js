@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Table from 'react-bootstrap/Table';
-// import { NavLink } from 'react-router-dom';
 import Axios from 'axios';
 import UserSelections from './UserSelections';
 import './Sports.css'
@@ -25,12 +24,13 @@ class Events extends Component {
 
     makeRequest = async (key) => {
         if (key.length) {
-            const res = await Axios('http://localhost:3003/posts')
-            const data = res.data[0].data;
+            // //Call sample game list from DB 
+            // const res = await Axios('http://localhost:3003/events')
+            // const data = res.data[0].data;
 
-            // Apelare API:
-            // const res = await Axios(`${this.state.URL}${key}`)
-            // const data = res.data.data;
+            // Call API:
+            const res = await Axios(`${this.state.URL}${key}`)
+            const data = res.data.data;
 
             this.setState({
                 data
@@ -121,13 +121,7 @@ class Events extends Component {
         })
     }
 
-
     render() {
-        // if(!this.state.events){
-        //     return(
-        //         <h1>Not yet loaded</h1>
-        //     )
-        // }
         return(
             <div>
                 { this.state.smoothData[0]?

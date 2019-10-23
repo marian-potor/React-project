@@ -10,13 +10,10 @@ class Competitions extends Component {
     }
 
     currentKey(elem) {
-        // console.log(elem);
-        
         const currentKey = elem.key;
         this.setState({
             currentKey
         })
-        // console.log('key:', currentKey);
     }
 
     getComp() {
@@ -34,7 +31,6 @@ class Competitions extends Component {
             this.setState({
                 render: groups
             })
-        // console.log(currentInfo);
         }
     }
 

@@ -26,7 +26,6 @@ class App extends React.Component {
       this.setState({ 
         user: JSON.parse(existingLogin),
       });
-      console.log('ddd', this.state.user);
     }
   }
 

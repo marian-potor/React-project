@@ -1,6 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import SessionContext from './SessionContext';
+import './Login.css';
 
 class Login extends React.Component {
   static contextType = SessionContext;
@@ -34,31 +35,43 @@ class Login extends React.Component {
         loginError: 'Username or password are not valid.'
       })
     }
-    
   }
 
   render() {
     return (
       <>
-      <form onSubmit={ this.handleSubmit }>
-        <h2>Login</h2>
-        <p style={ { 'fontWeight': 'bold', color: '#cc0000'} }>
-          { this.state.loginError }
-        </p>
-        <p>
-          <label htmlFor="username">Username</label>
-          <input id="username" type="text" onChange={ this.handleInput } value={ this.state.username } />
-        </p>
-        <p>
-          <label htmlFor="password">Password</label>
-          <input id="password" type="password" onChange={ this.handleInput } value={ this.state.password } />
-        </p>
-        <p>
-          <button type="submit">Log In</button>
-        </p>
-      </form>
+        <div className="logInForm">
+          <div className="d-flex justify-content-center h-100">
+            <div className="card">
+              <div className="card-header">
+                <h3>Sign In</h3>
+              </div>
+              <div className="card-body">
+                <p style={ { 'fontWeight': 'bold', color: '#cc0000'} }>
+                  { this.state.loginError }
+                </p>
+                <form onSubmit={ this.handleSubmit }>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text"></span>
+                    </div>
+                    <input id="username" type="text" className="form-control" placeholder="username" onChange={ this.handleInput } value={ this.state.username } />
+                  </div>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text"></span>
+                    </div>
+                    <input id="password" type="password" className="form-control" placeholder="password" onChange={ this.handleInput } value={ this.state.password } />
+                  </div>
+                  <div>
+                    <button className="btn logInButton">Log In</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </>
-    
     );
   }
 }
